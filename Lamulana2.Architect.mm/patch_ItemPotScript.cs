@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class patch_ItemPotScript : ItemPotScript
 {
-    public Camera[] cams;
-    public int camIndex;
-    public Vector3 worldPos;
+    [NonSerialized]public Camera[] cams;
+    [NonSerialized]public int camIndex;
+    [NonSerialized]public Vector3 worldPos;
 
-    public Font currentFont = null;
+    [NonSerialized]public Font currentFont = null;
     
     public void OnGUI()
     {

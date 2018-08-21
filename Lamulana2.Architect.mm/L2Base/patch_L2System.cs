@@ -13,11 +13,11 @@ namespace L2Base
 {
     public class patch_L2System : L2System
     {
-        public List<string> flagWatch = new List<string>();
+        [NonSerialized] public List<string> flagWatch = new List<string>();
 
-        public Font currentFont = null;
+        [NonSerialized] public Font currentFont = null;
 
-        public bool showScore = true;
+        [NonSerialized] public bool showScore = true;
 
         public extern void orig_Update();
         public extern void orig_Awake();
@@ -29,7 +29,7 @@ namespace L2Base
             File.Delete("flags.log");
             orig_Awake();
         }
-        
+
         public bool setFlagData(int sheet_no, string name, short data)
         {
             AddFlagToWatch(sheet_no, name, data);
@@ -40,7 +40,7 @@ namespace L2Base
         public bool setFlagData(int sheet_no, int flag_no, short data)
         {
             AddFlagToWatch(sheet_no, getFlagSys().flag.cellData[sheet_no][flag_no + 1][0][0], data);
-            
+
             return orig_setFlagData(sheet_no, flag_no, data);
         }
 
@@ -74,7 +74,7 @@ namespace L2Base
         {
             if (name.StartsWith("playtime")) return;
             if (name == "Gold" || name == "weight" || name == "Playtime") return;
-            
+
             if (flagWatch == null)
             {
                 flagWatch = new List<String>();
@@ -86,7 +86,7 @@ namespace L2Base
 
             short difference = (short) (data - oldData);
 
-            if (difference == 0) 
+            if (difference == 0)
                 return;
 
             flagWatch.Add($"[{time}] {getFlagSys().flag.seetName[sheet_no]}.{name} = {data} (diff:{difference})");
@@ -124,20 +124,21 @@ namespace L2Base
             short score = 0;
             getFlag(3, 30, ref score);
             GUI.Label(new Rect(0f, 0f, 30f, 30f), string.Concat(score), guistyle);
-            
+
             GUIContent timer = new GUIContent(GetCurrentTimestamp());
             Vector2 size = guistyle.CalcSize(timer);
 
             GUI.Label(new Rect(Screen.width - size.x, Screen.height - size.y, size.x, size.y), timer, guistyle);
-            
-            if (flagWatch.Count < 1) 
+
+            if (flagWatch.Count < 1)
                 return;
 
             guistyle.fontSize = 10;
-            GUIContent flw1 = new GUIContent(flagWatch[flagWatch.Count - 1] + "\r\n" + flagWatch[flagWatch.Count - 2] + "\r\n" + flagWatch[flagWatch.Count - 3]);
+            GUIContent flw1 = new GUIContent(flagWatch[flagWatch.Count - 1] + "\r\n" + flagWatch[flagWatch.Count - 2] +
+                                             "\r\n" + flagWatch[flagWatch.Count - 3]);
             Vector2 flw1Size = guistyle.CalcSize(flw1);
             GUI.Label(new Rect(0, Screen.height - flw1Size.y, flw1Size.x, flw1Size.y), flw1, guistyle);
-            
+
             try
             {
                 GUIContent flw2 = new GUIContent(flagWatch[flagWatch.Count - 4] + "\r\n" +
@@ -148,7 +149,9 @@ namespace L2Base
                 GUI.Label(new Rect(flw1Size.x + 20, Screen.height - flw1Size.y, flw2Size.x, flw2Size.y), flw2,
                     guistyle);
             }
-            catch (Exception e) {}
+            catch (Exception e)
+            {
+            }
         }
     }
 }

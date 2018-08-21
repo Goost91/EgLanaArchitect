@@ -10,9 +10,9 @@ namespace L2Flag
     
      public class patch_L2FlagSystem : L2FlagSystem
     {
-        public List<string> flagWatch = new List<string>();
+        [NonSerialized] public List<string> flagWatch = new List<string>();
 
-        public Font currentFont = null;
+        [NonSerialized] public Font currentFont = null;
         
         public patch_L2FlagSystem(L2System l2sys) : base(l2sys)
         {
