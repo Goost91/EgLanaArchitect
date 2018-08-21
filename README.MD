@@ -8,8 +8,8 @@ Eg-Lana Architect is a simple tool that allows you to view various hidden detail
 
 Based on the excellent MonoMod patcher, check it out here: https://github.com/0x0ade/MonoMod
 ## How to run
-1. Create a copy of the game folder to run the mod from
-2. Download the latest release from the releases section
+1. Create a copy of the game folder to run the mod from 
+2. Download the latest release from https://github.com/Goost91/EgLanaArchitect/releases
 3. Open the copied folder and extract the zip in the same folder as Lamulana2.exe
 4. Go to LaMulana2_Data\Managed, and drag Assembly-CSharp.dll onto MonoMod.exe
 5. Rename Assembly-CSharp.dll to Assembly-CSharp.dll.backup
