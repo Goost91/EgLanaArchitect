@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lamulana2.Architect.mm", "Lamulana2.Architect.mm\Lamulana2.Architect.mm.csproj", "{588BAB5F-8C10-495D-BB0F-DEB13C30DF2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBE798BE-31EB-40CE-BBAF-0A4E2300A111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE798BE-31EB-40CE-BBAF-0A4E2300A111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE798BE-31EB-40CE-BBAF-0A4E2300A111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE798BE-31EB-40CE-BBAF-0A4E2300A111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A17C958-5C33-4035-AF76-F94A3AA2DC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A17C958-5C33-4035-AF76-F94A3AA2DC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A17C958-5C33-4035-AF76-F94A3AA2DC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A17C958-5C33-4035-AF76-F94A3AA2DC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{588BAB5F-8C10-495D-BB0F-DEB13C30DF2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{588BAB5F-8C10-495D-BB0F-DEB13C30DF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{588BAB5F-8C10-495D-BB0F-DEB13C30DF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{588BAB5F-8C10-495D-BB0F-DEB13C30DF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
