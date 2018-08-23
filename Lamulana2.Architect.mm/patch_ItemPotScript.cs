@@ -11,7 +11,7 @@ public class patch_ItemPotScript : ItemPotScript
     
     public void OnGUI()
     {
-        if (cams.Length == 0)
+        if (cams == null || cams.Length == 0)
         {
             cams = FindObjectsOfType<Camera>();
             return;
