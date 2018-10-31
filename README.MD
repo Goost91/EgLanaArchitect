@@ -6,7 +6,7 @@ Eg-Lana Architect is a simple tool that allows you to view various hidden detail
 * Shows an in-game timer on-screen
 * Save Anywhere feature, press F5 to access the save menu from every location with a grail point!
 
-Based on the excellent MonoMod patcher, check it out here: https://github.com/0x0ade/MonoMod
+Based on the excellent [MonoMod patcher](https://github.com/0x0ade/MonoMod), for anyone looking to do similar modifications to other games, it's a great tool to distribute your modifications without having to include the entire source of the game in your project!
 ## How to run
 1. Create a copy of the game folder to run the mod from 
 2. Download the latest EgLanaArchitect.7z from https://github.com/Goost91/EgLanaArchitect/releases
